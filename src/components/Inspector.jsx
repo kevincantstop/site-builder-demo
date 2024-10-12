@@ -1,7 +1,9 @@
 import {useEditor} from "@craftjs/core";
 import React from "react";
+import {useLoader} from "@/core/app-store";
 
 export const Inspector = () => {
+    const setLoader = useLoader(state => state.set);
     const { selected, actions, query } = useEditor((state, query) => {
         const [currentNodeId] = state.events.selected;
         if (currentNodeId) {
@@ -27,10 +29,13 @@ export const Inspector = () => {
                 }}>Delete</button>}
             </div>
             <div className="card-footer text-center py-4">
-                <button type="button" className="btn btn-outline-primary" onClick={() => {
+                <button type="button" className="btn btn-outline-primary w-100 mb-3" onClick={() => {
                     console.log(query.serialize());
                 }}>
                     Serialize JSON
+                </button>
+                <button type="button" className="btn btn-outline-secondary w-100" onClick={() => setLoader(true)}>
+                    Load JSON
                 </button>
             </div>
         </div>

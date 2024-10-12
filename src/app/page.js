@@ -6,6 +6,7 @@ import {Text} from "@/components/design/Text";
 import {Container} from "@/components/design/Container";
 import {Toolbox} from "@/components/Toolbox";
 import {Inspector} from "@/components/Inspector";
+import {Loader} from "@/components/Loader";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
                   <Toolbox/>
                   <Inspector/>
               </div>
+              <Loader />
           </Editor>
       </div>
   );
