@@ -7,7 +7,7 @@ export const Loader = () => {
     const visible   = useLoader(state => state.visible);
     const [json, setJSON] = useState('');
 
-    const { actions } = useEditor();
+    const {actions} = useEditor();
     return (
         <div className={`modal ${visible ? "d-block" : ""}`} tabIndex="-1">
             <div className="modal-dialog modal-dialog-centered">
@@ -19,9 +19,7 @@ export const Loader = () => {
                     <div className="modal-body">
                         <div className="mb-3">
                             <label htmlFor="json" className="form-label">JSON</label>
-                            <textarea className="form-control" id="json" rows="3" onChange={e => {
-                                setJSON(e.target.value);
-                            }} value={json}></textarea>
+                            <textarea className="form-control" id="json" rows="3" onChange={e => setJSON(e.target.value)} value={json}></textarea>
                         </div>
                     </div>
                     <div className="modal-footer">
