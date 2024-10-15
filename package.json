@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@craftjs/core": "^0.2.10",
+    "@craftjs/layers": "^0.2.5",
     "bootstrap": "^5.3.3",
     "next": "14.2.15",
     "react": "^18",

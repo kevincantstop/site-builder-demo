@@ -4,7 +4,7 @@ import React from "react";
 import {Container} from "@/components/design/Container";
 
 export const Toolbox = () => {
-    const { connectors, query } = useEditor();
+    const { connectors } = useEditor();
     return <div className="card mb-4">
         <div className="card-body">
             <button type="button"

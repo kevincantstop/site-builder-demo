@@ -18,7 +18,7 @@ export const Inspector = () => {
     });
 
     return (
-        <div className="card">
+        <div className="card  mb-4">
             <div className="card-body">
                 <h4 className="card-subtitle mb-3">
                     <span className="badge text-bg-info">{selected?.name}</span>
